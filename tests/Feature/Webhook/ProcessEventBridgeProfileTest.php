@@ -16,18 +16,18 @@ class ProcessEventBridgeProfileTest extends TestCase
         config()->set('webhook-client.configs.0.signing_secret', 'hVmYq3t6v9y$B&E)');
 
         $eventBody = [
-            'body' => ['key' => 'value']
+            'body' => ['key' => 'value'],
         ];
 
         $detail = [
             'signature' => EventBridgeDetailValidator::generateSignature($eventBody, config('webhook-client.configs.0.signing_secret')),
-            'event' => $eventBody
+            'event' => $eventBody,
         ];
 
         $this->postJson('/webhooks/event-bridge', [
             'id' => Str::uuid()->toString(),
             'detail-type' => 'test',
-            'detail' => $detail
+            'detail' => $detail,
         ])->assertOk();
     }
 
@@ -41,14 +41,13 @@ class ProcessEventBridgeProfileTest extends TestCase
         $this->assertFalse((new ProcessEventBridgeProfile())->shouldProcess($request));
     }
 
-
     public function testDuplicateEvent(): void
     {
         $webhook = WebhookCall::factory()->create();
         $request = Request::create('/webhooks/event-bridge');
         $request->json()->set('id', $webhook->event_id);
         $request->json()->set('detail-type', $webhook->name);
-        $request->json()->set('detail', ['event'=>['body'=>[]]]);
+        $request->json()->set('detail', ['event' => ['body' => []]]);
 
         $this->assertFalse((new ProcessEventBridgeProfile())->shouldProcess($request));
     }

@@ -2,7 +2,6 @@
 
 namespace Sidekicker\EventBridge\Webhook;
 
-
 use Illuminate\Http\Request;
 use Sidekicker\EventBridge\Models\WebhookCall;
 use Spatie\WebhookClient\WebhookProfile\WebhookProfile;
@@ -18,7 +17,7 @@ class ProcessEventBridgeProfile implements WebhookProfile
             && $contents->has('detail')
             && data_get($contents->get('detail'), 'event.body');
 
-        return $matches && !WebhookCall::query()
+        return $matches && ! WebhookCall::query()
                 ->where('event_id', '=', $contents->get('id'))
                 ->exists();
     }

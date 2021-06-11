@@ -20,7 +20,7 @@ class EventBridgeDetailValidator implements SignatureValidator
             $request->json('detail.signature')
         );
 
-        if (!$signature || is_array($signature)) {
+        if (! $signature || is_array($signature)) {
             return false;
         }
 
