@@ -4,10 +4,17 @@ namespace Sidekicker\EventBridge;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Sidekicker\EventBridge\Commands\EventBridgeCommand;
+use Spatie\WebhookClient\WebhookClientServiceProvider;
 
 class EventBridgeServiceProvider extends PackageServiceProvider
 {
+    public function register(): void
+    {
+        parent::register();
+
+        $this->app->register(WebhookClientServiceProvider::class);
+    }
+
     public function configurePackage(Package $package): void
     {
         /*
@@ -17,9 +24,8 @@ class EventBridgeServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-event-bridge')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel-event-bridge_table')
-            ->hasCommand(EventBridgeCommand::class);
+            ->hasConfigFile(['event-bridge', 'webhook-client'])
+            ->hasMigration('create_webhook_calls_table')
+            ->hasRoute('webhook');
     }
 }
