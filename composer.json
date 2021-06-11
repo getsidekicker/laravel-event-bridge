@@ -1,17 +1,17 @@
 {
-    "name": "vendor_slug/package_slug",
-    "description": ":package_description",
+    "name": "getsidekicker/laravel-event-bridge",
+    "description": "This is my package EventBridge",
     "keywords": [
-        ":vendor_name",
+        "getsidekicker",
         "laravel",
-        "package_slug"
+        "laravel-event-bridge"
     ],
-    "homepage": "https://github.com/vendor_slug/package_slug",
+    "homepage": "https://github.com/getsidekicker/laravel-event-bridge",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Sidekicker",
+            "email": "product@sidekicker.com.au",
             "role": "Developer"
         }
     ],
@@ -30,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Getsidekicker\\EventBridge\\": "src",
+            "Getsidekicker\\EventBridge\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Getsidekicker\\EventBridge\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,10 +50,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Getsidekicker\\EventBridge\\EventBridgeServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
+                "EventBridge": "Getsidekicker\\EventBridge\\EventBridgeFacade"
             }
         }
     },

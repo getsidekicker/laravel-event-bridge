@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Getsidekicker\EventBridge\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class EventBridgeCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-event-bridge';
 
     public $description = 'My command';
 
