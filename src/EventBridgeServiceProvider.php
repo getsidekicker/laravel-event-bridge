@@ -15,13 +15,13 @@ class EventBridgeServiceProvider extends PackageServiceProvider
         $this->app->register(WebhookClientServiceProvider::class);
     }
 
+    /*
+     * This class is a Package Service Provider
+     *
+     * @see https://github.com/spatie/laravel-package-tools
+     */
     public function configurePackage(Package $package): void
     {
-        /*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
-         */
         $package
             ->name('laravel-event-bridge')
             ->hasConfigFile(['event-bridge', 'webhook-client'])
