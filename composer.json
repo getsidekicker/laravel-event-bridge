@@ -1,6 +1,6 @@
 {
     "name": "getsidekicker/laravel-event-bridge",
-    "description": "This is my package EventBridge",
+    "description": "Consume AWS EventBridge events",
     "keywords": [
         "getsidekicker",
         "laravel",
@@ -30,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Getsidekicker\\EventBridge\\": "src",
-            "Getsidekicker\\EventBridge\\Database\\Factories\\": "database/factories"
+            "Sidekicker\\EventBridge\\": "src",
+            "Sidekicker\\EventBridge\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Getsidekicker\\EventBridge\\Tests\\": "tests"
+            "Sidekicker\\EventBridge\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,10 +50,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Getsidekicker\\EventBridge\\EventBridgeServiceProvider"
+                "Sidekicker\\EventBridge\\EventBridgeServiceProvider"
             ],
             "aliases": {
-                "EventBridge": "Getsidekicker\\EventBridge\\EventBridgeFacade"
+                "EventBridge": "Sidekicker\\EventBridge\\EventBridgeFacade"
             }
         }
     },

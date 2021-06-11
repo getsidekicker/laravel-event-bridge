@@ -1,2 +1,2 @@
 providers:
-  - Getsidekicker\EventBridge\EventBridgeServiceProvider
+  - Sidekicker\EventBridge\EventBridgeServiceProvider

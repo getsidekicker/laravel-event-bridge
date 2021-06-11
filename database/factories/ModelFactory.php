@@ -1,6 +1,6 @@
 <?php
 
-namespace Getsidekicker\EventBridge\Database\Factories;
+namespace Sidekicker\EventBridge\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

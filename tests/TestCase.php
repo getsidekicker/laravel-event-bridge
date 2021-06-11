@@ -1,10 +1,10 @@
 <?php
 
-namespace Getsidekicker\EventBridge\Tests;
+namespace Sidekicker\EventBridge\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Getsidekicker\EventBridge\EventBridgeServiceProvider;
+use Sidekicker\EventBridge\EventBridgeServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Getsidekicker\\EventBridge\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Sidekicker\\EventBridge\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

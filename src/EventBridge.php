@@ -1,6 +1,6 @@
 <?php
 
-namespace Getsidekicker\EventBridge;
+namespace Sidekicker\EventBridge;
 
 class EventBridge
 {

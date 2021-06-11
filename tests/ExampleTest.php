@@ -1,6 +1,6 @@
 <?php
 
-namespace Getsidekicker\EventBridge\Tests;
+namespace Sidekicker\EventBridge\Tests;
 
 class ExampleTest extends TestCase
 {

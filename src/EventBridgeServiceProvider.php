@@ -1,10 +1,10 @@
 <?php
 
-namespace Getsidekicker\EventBridge;
+namespace Sidekicker\EventBridge;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Getsidekicker\EventBridge\Commands\EventBridgeCommand;
+use Sidekicker\EventBridge\Commands\EventBridgeCommand;
 
 class EventBridgeServiceProvider extends PackageServiceProvider
 {

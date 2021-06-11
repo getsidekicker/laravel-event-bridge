@@ -36,13 +36,13 @@ composer require getsidekicker/laravel-event-bridge
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --provider="Getsidekicker\EventBridge\EventBridgeServiceProvider" --tag="laravel-event-bridge-migrations"
+php artisan vendor:publish --provider="Sidekicker\EventBridge\EventBridgeServiceProvider" --tag="laravel-event-bridge-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="Getsidekicker\EventBridge\EventBridgeServiceProvider" --tag="laravel-event-bridge-config"
+php artisan vendor:publish --provider="Sidekicker\EventBridge\EventBridgeServiceProvider" --tag="laravel-event-bridge-config"
 ```
 
 This is the contents of the published config file:
@@ -55,7 +55,7 @@ return [
 ## Usage
 
 ```php
-$laravel-event-bridge = new Getsidekicker\EventBridge();
+$laravel-event-bridge = new Sidekicker\EventBridge();
 echo $laravel-event-bridge->echoPhrase('Hello, Spatie!');
 ```
 

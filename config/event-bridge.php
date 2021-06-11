@@ -1,5 +1,5 @@
 <?php
-// config for Getsidekicker/ClassName
+// config for Sidekicker/ClassName
 return [
 
 ];

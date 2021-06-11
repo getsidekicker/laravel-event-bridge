@@ -1,6 +1,6 @@
 <?php
 
-namespace Getsidekicker\EventBridge\Commands;
+namespace Sidekicker\EventBridge\Commands;
 
 use Illuminate\Console\Command;
 

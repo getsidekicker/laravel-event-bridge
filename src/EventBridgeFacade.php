@@ -1,11 +1,11 @@
 <?php
 
-namespace Getsidekicker\EventBridge;
+namespace Sidekicker\EventBridge;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Getsidekicker\EventBridge\EventBridge
+ * @see \Sidekicker\EventBridge\EventBridge
  */
 class EventBridgeFacade extends Facade
 {
